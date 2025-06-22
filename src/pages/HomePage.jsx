@@ -7,7 +7,7 @@ export default function HomePage() {
   return (
     <div className="w-full h-[100dvh] flex flex-col">
       <Header />
-      <main className="flex flex-col lg:flex-row px-[15px] lg:p-[160px] py-[40px] justify-center lg:justify-between items-start gap-[40px]">
+      <main className="w-full flex flex-col lg:flex-row justify-start py-[30px] lg:py-[40px] px-[15px] lg:px-[160px] gap-[30px]">
         <AccordionItem />
         <AllProducts />
       </main>

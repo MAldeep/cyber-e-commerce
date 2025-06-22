@@ -16,7 +16,7 @@ export default function AccordionItem() {
     });
   }, []);
   return (
-    <div className="rounded-lg overflow-hidden w-full lg:w-[256px] flex flex-col basis-[50%]">
+    <div className="rounded-lg overflow-hidden w-[100%] lg:w-[25%] flex flex-col grow-0 shrink-0">
       <button
         className="flex justify-between items-center p-4 w-full focus:outline-none"
         onClick={toggleAccordion}
