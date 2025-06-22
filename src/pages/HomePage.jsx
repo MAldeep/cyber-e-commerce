@@ -1,5 +1,6 @@
 import AccordionItem from "../components/AccordionItem";
 import AllProducts from "../components/AllProducts";
+import Footer from "../components/Footer";
 import Header from "../components/Header";
 
 export default function HomePage() {
@@ -8,8 +9,9 @@ export default function HomePage() {
       <Header />
       <main className="flex flex-col lg:flex-row px-[160px] py-[40px] justify-center lg:justify-between items-start gap-[40px]">
         <AccordionItem />
-        <AllProducts/>
+        <AllProducts />
       </main>
+      <Footer />
     </div>
   );
 }

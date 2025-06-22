@@ -7,7 +7,7 @@ export default function SearchField({className}) {
       <input
         type="search"
         placeholder="Search"
-        className="outline-0 border-0 bg-transparent text-[14px]"
+        className="outline-0 border-0 bg-transparent text-[14px] w-full"
       />
     </div>
   );

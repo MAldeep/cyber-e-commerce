@@ -12,7 +12,6 @@ export default function AllProducts() {
       .get(`${URL}/api/products?populate=*`)
       .then((res) => {
         setProducts(res.data.data);
-        console.log(res.data.data);
       })
       .catch((err) => console.error(err));
   }, [setProducts]);
