@@ -1,6 +1,11 @@
-export default function ProductCard({ title, image, specs, price }) {
+import {  useNavigate } from "react-router-dom";
+
+export default function ProductCard({id, title, image, specs, price }) {
+  const navigate = useNavigate();
   return (
-    <div className="w-[266px] px-[16px] py-[24px] rounded-[9px] flex flex-col gap-[16px] justify-start items-start bg-[#F6F6F6]">
+    <div className="w-[266px] px-[16px] py-[24px] rounded-[9px] flex flex-col gap-[16px] justify-start items-start bg-[#F6F6F6]"
+    onClick={()=> navigate("/" + id)}
+    >
       <img src={image} className="w-[234px] h-[160px] rounded-[8px] object-cover" />
       <p className="text-[16px] font-[600] text-[#121212]">{title}</p>
       <p className="text-[16px] font-[600] text-[#121212]">{specs}</p>

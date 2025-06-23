@@ -29,11 +29,12 @@ export default function AllProducts() {
     <div>
       <p className="text-[#6C6C6C] text-[16px] font-[500] mb-[24px] text-center">
         Available Products :{" "}
-        <span className="text-[#000000] text-[20px] font-[500]">85</span>
+        <span className="text-[#000000] text-[20px] font-[500]">{products.length}</span>
       </p>
       <div className="w-full flex flex-wrap gap-[16px] justify-center mb-[40px]">
         {currentItems.map((el) => (
           <ProductCard
+            id={el.documentId}
             key={el.documentId}
             title={el.title}
             image={URL + el.img.url}
@@ -48,7 +49,7 @@ export default function AllProducts() {
           <button
             key={num}
             onClick={() => setCurrentPage(num + 1)}
-            className={`px-4 py-2 rounded border 
+            className={`px-4 py-2 rounded border cursor-pointer
                   ${
                     currentPage === num + 1
                       ? "bg-black text-white"

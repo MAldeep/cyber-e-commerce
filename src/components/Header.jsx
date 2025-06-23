@@ -7,8 +7,10 @@ import { CiHeart } from "react-icons/ci";
 import { IoPersonOutline } from "react-icons/io5";
 import { BsCart3 } from "react-icons/bs";
 import { RxHamburgerMenu } from "react-icons/rx";
+import { useNavigate } from "react-router-dom";
 
 export default function Header() {
+  const navigate = useNavigate();
   const { URL } = baseUrl();
   const [logo, setLogo] = useState([]);
   useEffect(() => {
@@ -18,7 +20,10 @@ export default function Header() {
   }, []);
   return (
     <header className="w-full px-[16px] md:px-[160px] py-[16px] flex justify-between items-center border-b-[#B5B5B5] border-b-[1px]">
-      <img src={logo} />
+      <img 
+      src={logo} 
+      onClick={()=> navigate("/")}
+      />
       <SearchField className="bg-[#F5F5F5] hidden md:flex gap-[10px] rounded-2xl items-center p-[16px] w-[372px]" />
       <NavLinks />
       <CiHeart className="text-[#000000] text-[25px] hidden md:block" />
