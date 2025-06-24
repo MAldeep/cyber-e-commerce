@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useWishList } from "../store";
+import AddToCart from "./AddToCart";
 
 export default function ProductCard({
   id,
@@ -24,9 +25,8 @@ export default function ProductCard({
       <p className="text-[16px] font-[600] text-[#121212]">{title}</p>
       <p className="text-[16px] font-[600] text-[#121212]">{specs}</p>
       <p className="text-[16px] font-[600] text-[#121212]">{price} $</p>
-      <button className="w-full px-[64px] py-[12px] bg-[#000000] text-[#FFFFFF] text-[14px] font-[500] rounded-[8px] cursor-pointer">
-        Add To Cart
-      </button>
+      
+      <AddToCart className="w-full px-[64px] py-[12px] bg-[#000000] text-[#FFFFFF] text-[14px] font-[500] rounded-[8px] cursor-pointer"/>
       {context === "wishlist" && (
         <button
           onClick={(e) => {

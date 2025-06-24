@@ -19,7 +19,7 @@ export default function Header() {
     axios.get(`${URL}/api/home?populate=*`).then((res) => {
       setLogo(URL + res.data.data.logo.url);
     });
-  }, []);
+  }, [URL]);
   return (
     <header className="w-full px-[16px] md:px-[160px] py-[16px] flex justify-between items-center border-b-[#B5B5B5] border-b-[1px]">
       <img

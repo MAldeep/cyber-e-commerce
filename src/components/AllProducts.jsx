@@ -23,7 +23,7 @@ export default function AllProducts() {
         setProducts(res.data.data);
       })
       .catch((err) => console.error(err));
-  }, [setProducts]);
+  }, [setProducts , URL]);
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, [currentPage]);

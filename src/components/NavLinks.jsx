@@ -10,7 +10,7 @@ export default function NavLinks() {
     axios.get(`${URL}/api/navs`).then((res) => {
       setLinks(res.data.data);
     });
-  }, []);
+  }, [URL]);
   return (
     <nav className="justify-between items-center w-[354px] hidden md:flex">
       {links.map((el) => (

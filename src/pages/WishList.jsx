@@ -1,9 +1,11 @@
+import { useNavigate } from "react-router-dom";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import ProductCard from "../components/ProductCard";
 import { baseUrl, useWishList } from "../store";
 
 export default function WishList() {
+  const navigate = useNavigate();
   const { URL } = baseUrl();
   const { wishList } = useWishList();
   return (
@@ -25,6 +27,13 @@ export default function WishList() {
             context="wishlist"
           />
         ))}
+      </div>
+      <div className="w-full p-6 flex justify-center lg:justify-end">
+        <button 
+        onClick={()=> navigate("/")}
+        className=" px-[64px] py-[12px] bg-[#000000] text-[#FFFFFF] text-[14px] font-[500] rounded-[8px] cursor-pointer">
+          Continue Browsing
+        </button>
       </div>
       <Footer />
     </div>
