@@ -16,6 +16,7 @@ export default function NavLinks() {
       {links.map((el) => (
         <NavLink
           key={el.documentId}
+          to={el.navigation}
           className="text-[16px] text-[#000000] font-[500] cursor-pointer"
         >
           {el.title}

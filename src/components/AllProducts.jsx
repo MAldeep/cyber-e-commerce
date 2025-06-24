@@ -2,8 +2,10 @@ import { useEffect, useState } from "react";
 import { baseUrl, useProductStore } from "../store";
 import axios from "axios";
 import ProductCard from "./ProductCard";
+// import { useNavigate } from "react-router-dom";
 
 export default function AllProducts() {
+  // const navigate = useNavigate();
   const { URL } = baseUrl();
   const { products } = useProductStore();
   const setProducts = useProductStore((state) => state.setProducts);
@@ -29,7 +31,9 @@ export default function AllProducts() {
     <div>
       <p className="text-[#6C6C6C] text-[16px] font-[500] mb-[24px] text-center">
         Available Products :{" "}
-        <span className="text-[#000000] text-[20px] font-[500]">{products.length}</span>
+        <span className="text-[#000000] text-[20px] font-[500]">
+          {products.length}
+        </span>
       </p>
       <div className="w-full flex flex-wrap gap-[16px] justify-center mb-[40px]">
         {currentItems.map((el) => (

@@ -2,12 +2,14 @@ import { useParams } from "react-router-dom";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import axios from "axios";
-import { baseUrl } from "../store";
+import { baseUrl} from "../store";
 import { useEffect, useState } from "react";
 import ProductAssure from "../components/ProductAssure";
 import ProductBtns from "../components/ProductBtns";
 
 export default function ProductDetails() {
+
+
   const params = useParams();
   const { URL } = baseUrl();
   const productId = params.productId;
@@ -41,7 +43,11 @@ export default function ProductDetails() {
   // const { attributes } = product;
   // console.log(attributes);
   if (loading) {
-    return <p className="pt-24 text-[40px] font-[600]">loading ...</p>;
+    return (
+      <p className="py-24 text-[40px] font-[600] text-center text-[#000] bg-amber-50">
+        loading ...
+      </p>
+    );
   }
   return (
     <div className="w-full h-full">
@@ -65,8 +71,8 @@ export default function ProductDetails() {
               Incredible photosas in weak, yesand in bright lightusing the new
               systemwith two cameras
             </p>
-            <ProductBtns/>
-            <ProductAssure/>
+            <ProductBtns product={product}/>
+            <ProductAssure />
           </div>
         </div>
       </div>
