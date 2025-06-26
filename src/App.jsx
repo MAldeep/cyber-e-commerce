@@ -4,6 +4,7 @@ import ProductDetails from "./pages/ProductDetails";
 import WishList from "./pages/WishList";
 import { Toaster } from "react-hot-toast";
 import Cart from "./pages/Cart";
+import Login from "./pages/Login";
 
 export default function App() {
   return (
@@ -12,7 +13,7 @@ export default function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/login" element={<h1>login page</h1>} />
+          <Route path="/login" element={<Login/>} />
           <Route path="/register" element={<h1>register page</h1>} />
           <Route path="/:productId" element={<ProductDetails />} />
           <Route path="/cart" element={<Cart/>} />
