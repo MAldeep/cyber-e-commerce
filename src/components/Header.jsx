@@ -38,7 +38,10 @@ export default function Header() {
           {wishList.length}
         </p>
       </div>
-      <BsCart3 className="text-[#000000] text-[25px] hidden md:block" />
+      <BsCart3
+        onClick={() => navigate("/cart")}
+        className="text-[#000000] text-[25px] hidden md:block"
+      />
       <IoPersonOutline className="text-[#000000] text-[25px] hidden md:block" />
       <RxHamburgerMenu className="text-[#000000] text-[25px] md:hidden" />
     </header>

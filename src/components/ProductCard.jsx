@@ -26,14 +26,14 @@ export default function ProductCard({
       <p className="text-[16px] font-[600] text-[#121212]">{specs}</p>
       <p className="text-[16px] font-[600] text-[#121212]">{price} $</p>
       
-      <AddToCart className="w-full px-[64px] py-[12px] bg-[#000000] text-[#FFFFFF] text-[14px] font-[500] rounded-[8px] cursor-pointer"/>
+      <AddToCart 
+      product={{id , image , title , specs , price}}
+      className="w-full px-[64px] py-[12px] bg-[#000000] text-[#FFFFFF] text-[14px] font-[500] rounded-[8px] cursor-pointer"/>
       {context === "wishlist" && (
         <button
           onClick={(e) => {
             e.stopPropagation();
             removeFromWishlist(removeId);
-            // navigate("/");
-            // console.log(removeId);
           }}
           className="w-full px-[64px] py-[12px] bg-red-600 text-[#FFFFFF] text-[14px] font-[500] rounded-[8px] cursor-pointer"
         >
